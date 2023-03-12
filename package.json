@@ -13,7 +13,7 @@
     {
       "name": "tvc-open-symbol",
       "title": "Open Symbol",
-      "description": "Opens a symbol in TradingView",
+      "description": "Opens a symbol in the current TradingView chart",
       "mode": "no-view",
       "arguments": [
         {
@@ -43,6 +43,54 @@
       ]
     },
     {
+      "name": "tvc-take-chart-screenshot",
+      "title": "Take Chart Screenshot",
+      "description": "Takes a screenshot of a symbol's chart in TradingView",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "symbol",
+          "title": "Symbol",
+          "type": "text",
+          "description": "The symbol to screenshot in TradingView",
+          "placeholder": "AAPL",
+          "required": true
+        },
+        {
+          "name": "interval",
+          "title": "Interval",
+          "type": "text",
+          "description": "Interval to screenshot in minutes",
+          "placeholder": "60",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "tvc-take-chart-screenshot-and-copy",
+      "title": "Take Chart Screenshot and Copy",
+      "description": "Takes a screenshot of a symbol's chart in TradingView and copies it to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "symbol",
+          "title": "Symbol",
+          "type": "text",
+          "description": "The symbol to screenshot in TradingView",
+          "placeholder": "AAPL",
+          "required": true
+        },
+        {
+          "name": "interval",
+          "title": "Interval",
+          "type": "text",
+          "description": "Interval to screenshot in minutes",
+          "placeholder": "60",
+          "required": false
+        }
+      ]
+    },
+    {
       "name": "tvc-add-note-to-symbol",
       "title": "Add Note to Symbol",
       "description": "Adds a text note to a symbol in TradingView",
@@ -68,6 +116,7 @@
     }
   ],
   "dependencies": {
+    "@ogma/logger": "^2.5.0",
     "@raycast/api": "^1.48.8",
     "run-applescript": "^6.1.0"
   },

@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ogma/logger': ^2.5.0
   '@raycast/api': ^1.48.8
   '@types/node': 18.8.3
   '@types/react': 18.0.9
@@ -9,6 +10,7 @@ specifiers:
   typescript: ^4.4.3
 
 dependencies:
+  '@ogma/logger': 2.5.0
   '@raycast/api': 1.48.8_2cx2ipqrn5f7svdjipmu7pbevq
   run-applescript: 6.1.0
 
@@ -19,6 +21,24 @@ devDependencies:
   typescript: 4.9.5
 
 packages:
+
+  /@ogma/common/1.0.0:
+    resolution: {integrity: sha512-IXvSnXbXccpxJR+UbN2fxp30R/44VFpx/T0ungb1PMwLa9BLmtbeQIXqc9TR11gRaDNY0e78tqVckau8oyXK0A==}
+    dev: false
+
+  /@ogma/logger/2.5.0:
+    resolution: {integrity: sha512-Uhn7MbDimmuFg5usKk7Drhrl98R7qTdl2HmhzWbY7+1qbc5N44V+Nwjm+vtgNhJPaBVS6t5GQiIo09xjsUraFA==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@ogma/common': 1.0.0
+      '@ogma/styler': 1.0.0
+    dev: false
+
+  /@ogma/styler/1.0.0:
+    resolution: {integrity: sha512-Twtijg2eUS4HEPyic0FEpkdJgRtLSvVow/3gmLsMkyU+GhSm80PnRlc6q1N1rmf1EQhuwGZLKhS30sYIuFV38A==}
+    dependencies:
+      '@ogma/common': 1.0.0
+    dev: false
 
   /@raycast/api/1.48.8_2cx2ipqrn5f7svdjipmu7pbevq:
     resolution: {integrity: sha512-Lfw1Fw+EiLv2Xo8EvDkZ6o6Z1eRx/sZ4SsHKYmZybNkRkxc2RHyJQ+4wDv9uraJH6KeAgnCiSjmbSZzMPBZV7Q==}

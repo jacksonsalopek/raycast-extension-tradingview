@@ -1,28 +1,30 @@
-import { LaunchProps, closeMainWindow } from '@raycast/api';
+import { LaunchProps } from '@raycast/api';
 import { runAppleScript } from 'run-applescript';
+import { TVCLogger } from './logger';
+import { TVCOpenSymbol } from './tvc-open-symbol'
+import { TVCSymbolArg } from './types';
 
-interface TVCAddSymbolToWatchlistArgs {
-	symbol: string;
-}
+const context = 'src/tvc-add-symbol-to-watchlist.tsx'
 
+/**
+ * Arguments for the TVCAddSymbolToWatchlist command.
+ */
+interface TVCAddSymbolToWatchlistArgs extends TVCSymbolArg {}
+
+/**
+ * Adds a symbol to the watchlist in TradingView.
+ * @param props Launch arguments.
+ */
 export default async function TVCAddSymbolToWatchlist(props: LaunchProps<{ arguments: TVCAddSymbolToWatchlistArgs }>) {
-	const { symbol } = props.arguments;
-	await closeMainWindow();
+  TVCLogger.log('TVCAddSymbolToWatchlist', { ...props, context });
+  TVCLogger.log('Adding symbol to watchlist in TradingView...', { context })
+
+	await TVCOpenSymbol(props);
 	await runAppleScript(`
-  on is_running(appName)
-    tell application "System Events" to (name of processes) contains appName
-  end is_running
-  set tvIsRunning to is_running("TradingView")
-  if not tvIsRunning then
-    tell application "TradingView" to launch
-  end if
-  tell application "TradingView" to activate
-  delay 1
-  set symbol to "${symbol}"
   tell application "System Events"
-    keystroke symbol
-    keystroke return
     delay 1
     keystroke "w" using {option down}
   end tell`);
+
+  TVCLogger.log('Symbol added to watchlist.', { context })
 }
