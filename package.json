@@ -3,7 +3,7 @@
   "name": "tradingview-controls",
   "title": "TradingView Controls",
   "description": "Controls TradingView from within Raycast",
-  "icon": "command-icon.png",
+  "icon": "icon.png",
   "author": "skaj",
   "categories": [
     "Finance"
@@ -21,7 +21,7 @@
           "title": "Symbol",
           "type": "text",
           "description": "The symbol to open in TradingView",
-          "placeholder": "AAPL",
+          "placeholder": "Symbol (e.g. AAPL)",
           "required": true
         }
       ]
@@ -37,7 +37,7 @@
           "title": "Symbol",
           "type": "text",
           "description": "The symbol to add in TradingView",
-          "placeholder": "AAPL",
+          "placeholder": "Symbol (e.g. AAPL)",
           "required": true
         }
       ]
@@ -53,15 +53,15 @@
           "title": "Symbol",
           "type": "text",
           "description": "The symbol to screenshot in TradingView",
-          "placeholder": "AAPL",
+          "placeholder": "Symbol (e.g. AAPL)",
           "required": true
         },
         {
           "name": "interval",
           "title": "Interval",
           "type": "text",
-          "description": "Interval to screenshot in minutes",
-          "placeholder": "60",
+          "description": "Interval of chart to screenshot in minutes",
+          "placeholder": "Interval (e.g. 60)",
           "required": false
         }
       ]
@@ -77,15 +77,15 @@
           "title": "Symbol",
           "type": "text",
           "description": "The symbol to screenshot in TradingView",
-          "placeholder": "AAPL",
+          "placeholder": "Symbol (e.g. AAPL)",
           "required": true
         },
         {
           "name": "interval",
           "title": "Interval",
           "type": "text",
-          "description": "Interval to screenshot in minutes",
-          "placeholder": "60",
+          "description": "Interval of chart to screenshot in minutes",
+          "placeholder": "Interval (e.g. 60)",
           "required": false
         }
       ]
@@ -101,7 +101,7 @@
           "title": "Symbol",
           "type": "text",
           "description": "The symbol to open in TradingView",
-          "placeholder": "AAPL",
+          "placeholder": "Symbol (e.g. AAPL)",
           "required": true
         },
         {
@@ -109,7 +109,7 @@
           "title": "Note",
           "type": "text",
           "description": "Text note to add to opened symbol",
-          "placeholder": "Feeling bullish",
+          "placeholder": "Note (e.g. Buy on dip)",
           "required": true
         }
       ]

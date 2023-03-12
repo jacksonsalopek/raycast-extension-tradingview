@@ -35,6 +35,10 @@ export async function TVCOpenSymbol(props: LaunchProps<{ arguments: TVCOpenSymbo
   set tvIsRunning to is_running("TradingView")
   if not tvIsRunning then
     tell application "TradingView" to launch
+    repeat until is_running("TradingView")
+      delay 0.1
+    end repeat
+    delay 4
   end if
   tell application "TradingView" to activate
   delay 1

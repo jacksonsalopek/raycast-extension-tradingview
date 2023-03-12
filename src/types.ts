@@ -9,3 +9,10 @@ export interface TVCIntervalArg {
 
 export interface TVCTakeChartScreenshotArgs extends TVCSymbolArg, Partial<TVCIntervalArg> {}
 export interface TVCChangeChartIntervalArgs extends TVCIntervalArg {}
+export interface TVCPreferences {
+	/** Time interval, denoted in minutes */
+	interval?: string;
+
+	/** Chart symbol */
+	symbol?: string;
+}
